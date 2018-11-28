@@ -1,0 +1,192 @@
+<com.raqun.worldcup.ui.widget.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    app:umanoDragView="@+id/dragView"
+    app:umanoOverlay="true"
+    app:umanoShadowHeight="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/parent_image_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/photo_edit_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <com.ahmedadeltito.photoeditorsdk.BrushDrawingView
+                android:id="@+id/drawing_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/photo_edit_iv"
+                android:layout_alignTop="@+id/photo_edit_iv"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_brush_mode"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/fading_shadow"
+            android:gravity="right"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/erase"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/baseline_clear_white_24dp" />
+
+            <ImageView
+                android:id="@+id/done"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/erase"
+                android:src="@mipmap/baseline_check_white_24dp" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawing_view_color_picker_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+        <RelativeLayout
+            android:id="@+id/top_parent_rl"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/fading_shadow"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/baseline_close_white_24dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/emoji"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@mipmap/baseline_photo_white_24dp" />
+
+                <ImageView
+                    android:id="@+id/brush"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@mipmap/baseline_brush_white_24dp" />
+
+                <ImageView
+                    android:id="@+id/text"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/baseline_title_white_24dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_parent_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/below_shadow"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/save"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/baseline_save_white_24dp" />
+
+            <ImageView
+                android:id="@+id/clear"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/save"
+                android:src="@mipmap/baseline_clear_white_24dp" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/baseline_share_white_24dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/delete_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/delete_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_border_text_view"
+                android:padding="10dp"
+                android:text="Delete"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_emoji_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.raqun.worldcup.ui.widget.SlidingUpPanelLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="default_view_margin">16dp</dimen>
+
+    <!-- CardView -->
+    <dimen name="default_cardview_margin">10dp</dimen>
+    <dimen name="default_cardview_radius">4dp</dimen>
+    <dimen name="default_cardview_shadow">4dp</dimen>
+
+    <!-- Texts -->
+    <dimen name="default_text_size">14sp</dimen>
+
+    <dimen name="image_loader_post_width">450dp</dimen>
+    <dimen name="watermark_width">80dp</dimen>
+    <dimen name="watermark_height">80dp</dimen>
+    <dimen name="watermark_right_margin">8dp</dimen>
+    <dimen name="watermark_top_margin">48dp</dimen>
+
+</resources>

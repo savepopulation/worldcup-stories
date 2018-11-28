@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WC Stories</string>
+
+    <!-- Titles -->
+    <string name="title_purchase">Unlock Packs</string>
+    <string name="upload_picker_title">Upload Picture</string>
+
+</resources>
